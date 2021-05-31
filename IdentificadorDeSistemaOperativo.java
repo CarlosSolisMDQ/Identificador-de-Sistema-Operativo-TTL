@@ -7,6 +7,14 @@ public class IdentificadorDeSistemaOperativo {
 
 
     public static void main(String[] args) throws IOException {
+        
+        if (args.length < 1 || args.length > 1){
+            System.err.println("**** El uso de la app es: java IdentificadorDeSistemaOperativo [ARGS]");
+            System.err.println("**** los [ARGUMENTOS] son la ip de la maquina objetivo");
+        }
+        
+        
+        
         Process process = Runtime.getRuntime().exec("ping -c 1 "+ args[0]);
         InputStream input = new BufferedInputStream(process.getInputStream());
         InputStreamReader inputStream = new InputStreamReader(input);
