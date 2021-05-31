@@ -11,6 +11,7 @@ public class IdentificadorDeSistemaOperativo {
         if (args.length < 1 || args.length > 1){
             System.err.println("**** El uso de la app es: java IdentificadorDeSistemaOperativo [ARGS]");
             System.err.println("**** los [ARGUMENTOS] son la ip de la maquina objetivo");
+            System.exit(1);
         }
         
         
